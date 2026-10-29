@@ -355,6 +355,31 @@ nav.menu a[aria-current="page"]{text-decoration:underline;text-decoration-thickn
 .top li span{display:inline-block;width:calc(100% - 36px)}
 .top li b{float:right;font-variant-numeric:tabular-nums}
 @media (max-width:860px){.res-grid{grid-template-columns:1fr}}
+
+/* admin de ofertas */
+.adm-top{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+.ok-box{background:#D8F3E2;color:#11663A;border-radius:12px;padding:10px 14px;font-weight:600}
+.ok-box a{color:#11663A}
+.validade{font-size:12px;color:var(--tinta-2);font-weight:600}
+.fo-grid{display:grid;grid-template-columns:260px minmax(0,1fr);gap:20px;align-items:start}
+.fo-fotos,.fo-campos{display:grid;gap:14px;min-width:0}
+.fo-prev{aspect-ratio:4/5;border:2px dashed var(--linha);border-radius:14px;background:var(--branco);display:grid;place-items:center;overflow:hidden;color:var(--tinta-2);font-size:14px}
+.fo-prev img{width:100%;height:100%;object-fit:contain}
+.fo-enc{aspect-ratio:3/4}
+.chk{display:flex;gap:8px;align-items:center;font-size:14px;font-weight:600}
+.chk input{width:18px;height:18px}
+a.mini{color:var(--azul)}
+@media (max-width:760px){.fo-grid{grid-template-columns:1fr}.fo-fotos{grid-template-columns:1fr 1fr}}
+
+/* login */
+.login-box{max-width:420px;margin:12px auto 0;background:var(--branco);border:3px solid var(--azul);border-radius:24px;padding:28px;display:grid;gap:18px;box-shadow:8px 8px 0 var(--azul)}
+.login-cab{display:grid;gap:10px;justify-items:start}
+#fLogin{display:grid;gap:12px}
+.senha{display:flex;gap:8px;align-items:center}
+.senha input{flex:1;min-width:0}
+.login-demo{background:var(--amarelo-2);border-radius:14px;padding:12px 14px;display:grid;gap:4px;font-size:14px}
+.login-demo code{background:var(--branco);border-radius:6px;padding:1px 6px;font-weight:700}
+.login-demo small{color:var(--tinta-2)}
 </style>
 <style>html,body{margin:0}img{max-width:100%}:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}</style>
 </head>
@@ -391,7 +416,7 @@ nav.menu a[aria-current="page"]{text-decoration:underline;text-decoration-thickn
     </div>
     <div><h4>Loja 1 · Vila Aparecida</h4><p>Rua Acácio Manoel da Silva Viana, 185</p><p>(15) 3316-7889</p><p>WhatsApp (15) 99650-0827</p></div>
     <div><h4>Loja 2 · Pq. das Árvores</h4><p>Rua João Francisco Oliveira, 2030</p><p>WhatsApp (15) 99812-1716</p></div>
-    <div class="legal"><span>Farmacêutico responsável: a confirmar · CRF-SP: a confirmar</span><span><a href="#painel">Área da loja</a> · Site por KnowHowTech</span></div>
+    <div class="legal"><span>Farmacêutico responsável: a confirmar · CRF-SP: a confirmar</span><span><a href="#painel">Área da loja (login)</a> · Site por KnowHowTech</span></div>
   </div>
 </footer>
 
@@ -415,7 +440,7 @@ nav.menu a[aria-current="page"]{text-decoration:underline;text-decoration-thickn
   </div>
 </div>
 <script>
-const WIMG={"p_calciodex": "img/p-calciodex.jpg", "e_calciodex": "img/e-calciodex.jpg", "p_canela": "img/p-canela.jpg", "e_canela": "img/e-canela.jpg", "p_wahl": "img/p-wahl.jpg", "e_wahl": "img/e-wahl.jpg", "p_p717": "img/p-p717.jpg", "e_p717": "img/e-p717.jpg", "p_diclofenaco": "img/p-diclofenaco.jpg", "e_diclofenaco": "img/e-diclofenaco.jpg", "p_zerocal": "img/p-zerocal.jpg", "e_zerocal": "img/e-zerocal.jpg", "p_bioflexis": "img/p-bioflexis.jpg", "e_bioflexis": "img/e-bioflexis.jpg", "p_nutren": "img/p-nutren.jpg", "e_nutren": "img/e-nutren.jpg", "p_dorflex": "img/p-dorflex.jpg", "e_dorflex": "img/e-dorflex.jpg", "p_upvitam": "img/p-upvitam.jpg", "e_upvitam": "img/e-upvitam.jpg", "p_onetouch": "img/p-onetouch.jpg", "e_onetouch": "img/e-onetouch.jpg", "p_bigfral": "img/p-bigfral.jpg", "e_bigfral": "img/e-bigfral.jpg", "p_jontex": "img/p-jontex.jpg", "e_jontex": "img/e-jontex.jpg"};
+const WIMG={"p_calciodex": "img/p-calciodex.jpg", "e_calciodex": "img/e-calciodex.jpg", "p_canela": "img/p-canela.jpg", "e_canela": "img/e-canela.jpg", "p_wahl": "img/p-wahl.jpg", "e_wahl": "img/e-wahl.jpg", "p_p717": "img/p-p717.jpg", "e_p717": "img/e-p717.jpg", "p_diclofenaco": "img/p-diclofenaco.jpg", "e_diclofenaco": "img/e-diclofenaco.jpg", "p_zerocal": "img/p-zerocal.jpg", "e_zerocal": "img/e-zerocal.jpg", "p_bioflexis": "img/p-bioflexis.jpg", "e_bioflexis": "img/e-bioflexis.jpg", "p_nutren": "img/p-nutren.jpg", "e_nutren": "img/e-nutren.jpg", "p_dorflex": "img/p-dorflex.jpg", "e_dorflex": "img/e-dorflex.jpg", "p_upvitam": "img/p-upvitam.jpg", "e_upvitam": "img/e-upvitam.jpg", "p_onetouch": "img/p-onetouch.jpg", "e_onetouch": "img/e-onetouch.jpg", "p_bigfral": "img/p-bigfral.jpg", "e_bigfral": "img/e-bigfral.jpg", "p_jontex": "img/p-jontex.jpg", "e_jontex": "img/e-jontex.jpg", "LOGO": "img/logo.png"};
 const IMG={dermafeme:"img/dermafeme.jpg",foreverliss:"img/foreverliss.jpg",oleouva:"img/oleouva.jpg",palmolive:"img/palmolive.jpg",siage:"img/siage.jpg",ricca:"img/ricca.jpg",venus:"img/venus.jpg",giovanna:"img/giovanna.jpg",cesta:"img/cesta.jpg"};
 const CATS=["Todos","Banho e corpo","Cabelos","Cuidados pessoais"];
 const P=[
@@ -444,11 +469,19 @@ const W=[
  {id:113,camp:"especial",n:"Preservativo lubrificado 8 unidades",m:"Jontex",c:"Saúde",de:23.75,por:21.40,img:"p_jontex",enc:"e_jontex",tag:"Leve 8, pague 7",b:["Mais segurança: testado eletronicamente","Lubrificação ideal","Textura suave"]}
 ];
 P.forEach(p=>p.camp="beleza");P.unshift(...W);Object.assign(IMG,WIMG);
+const im=k=>IMG[k]||k;
+const BASE=P.map(p=>({...p}));
+let CUST=(()=>{try{return JSON.parse(localStorage.getItem("md-cust"))||{novos:[],edit:{},off:[]}}catch(e){return {novos:[],edit:{},off:[]}}})();
+function aplicarCust(){P.length=0;BASE.forEach(b=>P.push({...b,...(CUST.edit[b.id]||{}),off:CUST.off.includes(b.id)}));CUST.novos.forEach(n=>P.push({...n,off:CUST.off.includes(n.id)}))}
+const hojeISO=()=>new Date().toISOString().slice(0,10);
+const vencida=p=>p.val&&p.val<hojeISO();
+const V=()=>P.filter(p=>!p.off&&!vencida(p));
+aplicarCust();
 const CAMPS=[["todas","Todas"],["senior","Quinta Sênior"],["especial","Oferta especial"],["beleza","Beleza e banho"]];
 const CAMPNOME={senior:"Quinta Sênior",especial:"Oferta especial",beleza:"Beleza e banho"};
 const AVISO="É um medicamento. Seu uso pode trazer riscos. Procure o médico e o farmacêutico. Leia a bula.";
 const precoItem=(p,qt)=>p.leve3?Math.floor(qt/3)*p.leve3+(qt%3)*p.por:p.por*qt;
-const estq=id=>ESTOQUE[id]||[[6,4],[9,2],[3,5],[7,0]][id%4];
+const estq=id=>(prod(id)&&prod(id).est)||ESTOQUE[id]||[[6,4],[9,2],[3,5],[7,0]][id%4];
 const LOJAS=[
  {nome:"Loja 1",bairro:"Vila Aparecida",end:"Rua Acácio Manoel da Silva Viana, 185",fixo:"(15) 3316-7889",wpp:"(15) 99650-0827",num:"5515996500827",
   h:[["Segunda a sexta","07h30 às 22h"],["Sábado","08h às 20h"],["Domingo e feriados","08h às 13h"]],ab:[[7.5,22],[8,20],[8,13]]},
@@ -461,7 +494,7 @@ const esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",
 const ler=(k,d)=>{try{return JSON.parse(localStorage.getItem(k))??d}catch(e){return d}};
 const gravar=(k,v)=>{try{localStorage.setItem(k,JSON.stringify(v))}catch(e){}};
 const $=id=>document.getElementById(id);
-const prod=id=>P.find(p=>p.id===+id);
+const prod=id=>P.find(p=>p.id===+id)||(typeof BASE!=="undefined"&&BASE.find(p=>p.id===+id))||(typeof CUST!=="undefined"&&CUST.novos.find(p=>p.id===+id))||{id:+id,n:"Produto removido",m:"",por:0,img:"",b:[],camp:"beleza"};
 let cat="todas",q="",cesta=ler("md-cesta",{}),reservas=ler("md-reservas",[]),qtdDet=1,form=ler("md-form",{});
 let filtroLoja="todas",abaAdm="resultados";
 const EXEMPLOS=[
@@ -471,21 +504,22 @@ const EXEMPLOS=[
 ];
 const ROT={pendente:"Aguardando separação",separada:"Separada · pronta",retirada:"Retirada",cancelada:"Cancelada"};
 const totalDe=itens=>itens.reduce((s,[id,qt])=>s+precoItem(prod(id),qt),0);
-const itensCesta=()=>Object.keys(cesta).filter(k=>cesta[k]>0).map(k=>[+k,cesta[k]]);
+const itensCesta=()=>Object.keys(cesta).filter(k=>cesta[k]>0&&P.some(p=>p.id===+k)).map(k=>[+k,cesta[k]]);
 const nItens=()=>itensCesta().reduce((s,[,q])=>s+q,0);
 function salvarCesta(){gravar("md-cesta",cesta);$("nCesta").textContent=nItens();$("nTab").textContent=nItens();$("nTab").hidden=!nItens()}
 
 /* ---- componentes ---- */
 const card=p=>{const off=p.de?Math.round((1-p.por/p.de)*100):0,na=cesta[p.id];
- return `<article class="prod"><a class="foto-link" href="#produto-${p.id}"><div class="foto ${p.enc?"contain":""}"><img src="${IMG[p.img]}" alt="${esc(p.m+" "+p.n)}" loading="lazy">${off?`<span class="selo">-${off}%</span>`:""}<span class="camp ${p.camp}">${CAMPNOME[p.camp]}</span></div></a>
+ return `<article class="prod"><a class="foto-link" href="#produto-${p.id}"><div class="foto ${p.enc?"contain":""}"><img src="${im(p.img)}" alt="${esc(p.m+" "+p.n)}" loading="lazy">${off?`<span class="selo">-${off}%</span>`:""}<span class="camp ${p.camp}">${CAMPNOME[p.camp]}</span></div></a>
  <h3><a href="#produto-${p.id}">${p.n}</a></h3><div class="marca">${p.m}${p.det?" · "+p.det:""}</div>
  ${p.tag?`<div class="tag-oferta">${p.tag}</div>`:""}
+ ${p.val?`<small class="validade">Válida até ${p.val.split("-").reverse().slice(0,2).join("/")}</small>`:""}
  <div class="precos">${p.de?`<s>De ${brl(p.de)}</s>`:`<span class="un">1 un.</span>`}<strong>${brl(p.por)}</strong></div>
  ${p.med?`<small class="aviso-med">${AVISO}</small>`:""}
  <div class="acoes-card"><button type="button" class="add ${na?"ok":""}" data-add="${p.id}">${na?`Na cesta (${na}) · +1`:"Colocar na cesta"}</button>${p.enc?`<button type="button" class="ver-enc" data-enc="${p.id}" aria-label="Ver encarte de ${esc(p.n)}">Encarte</button>`:""}</div></article>`};
 const migalha=(...p)=>`<nav class="migalha" aria-label="Você está em"><a href="#inicio">Início</a>${p.map(x=>`<span>›</span>${x[1]?`<a href="#${x[1]}">${x[0]}</a>`:`<span>${x[0]}</span>`}`).join("")}</nav>`;
 const linhaItens=(itens,edit)=>itens.map(([id,qt])=>{const p=prod(id);
- return `<div class="item"><img src="${IMG[p.img]}" alt="" ${p.enc?'style="object-fit:contain;background:#fff"':""}><div class="nome"><a href="#produto-${p.id}" style="text-decoration:none">${p.n}</a><br><small style="color:var(--tinta-2)">${p.m} · ${brl(p.por)} un.${p.leve3?" · 3 por "+brl(p.leve3):""}</small></div><div class="val">${brl(precoItem(p,qt))}</div>
+ return `<div class="item"><img src="${im(p.img)}" alt="" ${p.enc?'style="object-fit:contain;background:#fff"':""}><div class="nome"><a href="#produto-${p.id}" style="text-decoration:none">${p.n}</a><br><small style="color:var(--tinta-2)">${p.m} · ${brl(p.por)} un.${p.leve3?" · 3 por "+brl(p.leve3):""}</small></div><div class="val">${brl(precoItem(p,qt))}</div>
  ${edit?`<div class="qtd"><button type="button" data-q="${id}" data-d="-1" aria-label="Diminuir">−</button><span>${qt}</span><button type="button" data-q="${id}" data-d="1" aria-label="Aumentar">+</button><button type="button" class="link-txt" data-rm="${id}" style="margin-left:8px;font-size:13px">Remover</button></div>`:`<div class="qtd"><small>${qt} un.</small></div>`}</div>`}).join("");
 const passosTop=n=>`<div class="passos-top">${["Cesta","Dados e horário","Código"].map((t,i)=>`<span class="${i<n?"feito":i===n?"on":""}">${i+1}. ${t}</span>`).join("")}</div>`;
 
@@ -497,15 +531,19 @@ T.inicio=()=>`
     <h1>Reserve pelo celular, <em>retire sem fila.</em></h1>
     <p class="lead">Escolha as ofertas, reserve na loja mais perto e passe só para pegar. Se preferir, a gente entrega em casa em Boituva.</p>
     <div class="ctas"><a class="btn btn-azul" href="#ofertas">Ver ofertas e reservar</a><a class="btn btn-wpp" href="https://wa.me/5515996500827?text=${encodeURIComponent("Olá, MultiDrogas! Gostaria de fazer um pedido.")}" target="_blank" rel="noopener">Pedir pelo WhatsApp</a></div>
-    <div class="selos"><span>Reserva separada em até 30 min</span><span>Disk entrega</span><span>Cartão, Pix e dinheiro</span></div>
+    <div class="selos">
+     <span><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M12 8v4l3 2"/><circle cx="12" cy="12" r="9"/></svg>Reserva separada em até 30 min</span>
+     <span><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M3 7h11v9H3zM14 10h4l3 3v3h-7"/><circle cx="7" cy="17.5" r="1.8"/><circle cx="17" cy="17.5" r="1.8"/></svg>Disk entrega</span>
+     <span><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><rect x="3" y="6" width="18" height="13" rx="2"/><path d="M3 10h18"/></svg>Cartão, Pix e dinheiro</span>
+    </div>
   </div>
   <div class="hero-foto"><figure><img src="${IMG.cesta}" alt="Cliente segurando a cestinha azul no corredor de perfumaria da MultiDrogas"><figcaption>Corredor de perfumaria da MultiDrogas Boituva</figcaption></figure>
   <div class="disk"><small>DISK ENTREGA</small><b>(15) 99650-0827</b></div></div>
 </div></section>
 <div class="onda" aria-hidden="true"></div>
 <section class="qs"><div class="wrap">
-  <div class="qs-cab"><div><div class="eyebrow" style="color:var(--amarelo)">Ofertas da semana · toda quinta-feira</div><h2>Quinta <em>Sênior</em></h2><p>Cuidado e bem-estar para quem sempre cuidou da gente: suplementos, nutrição, alívio da dor e controle da glicose.</p></div><a class="btn btn-sec" href="#ofertas-senior">Ver as ${P.filter(p=>p.camp==="senior").length} ofertas</a></div>
-  <div class="grade">${P.filter(p=>p.camp==="senior").slice(0,4).map(card).join("")}</div>
+  <div class="qs-cab"><div><div class="eyebrow" style="color:var(--amarelo)">Ofertas da semana · toda quinta-feira</div><h2>Quinta <em>Sênior</em></h2><p>Cuidado e bem-estar para quem sempre cuidou da gente: suplementos, nutrição, alívio da dor e controle da glicose.</p></div><a class="btn btn-sec" href="#ofertas-senior">Ver as ${V().filter(p=>p.camp==="senior").length} ofertas</a></div>
+  <div class="grade">${V().filter(p=>p.camp==="senior").slice(0,4).map(card).join("")}</div>
 </div></section>
 <section class="tela" style="padding-top:40px"><div class="wrap">
   <div class="atalhos">
@@ -514,12 +552,12 @@ T.inicio=()=>`
     <a class="atalho" href="#lojas"><b>Lojas e horários</b><span>Vila Aparecida e Pq. das Árvores.</span><span class="seta">Como chegar →</span></a>
   </div>
   <div class="cab" style="margin:0"><div><div class="eyebrow">Ofertas da semana</div><h2>Oferta especial</h2></div><a class="btn btn-sec" href="#ofertas-especial">Ver ofertas especiais</a></div>
-  <div class="grade">${P.filter(p=>p.camp==="especial").map(card).join("")}${card(P.find(p=>p.camp==="beleza"))}</div>
+  <div class="grade">${V().filter(p=>p.camp==="especial").map(card).join("")}${(V().find(p=>p.camp==="beleza")?card(V().find(p=>p.camp==="beleza")):"")}</div>
 </div></section>
 <section class="niver"><div class="wrap"><div class="num">5</div><div><h2>anos cuidando de Boituva</h2><p>Obrigado a cada cliente da campanha de aniversário. Parabéns, Regina, ganhadora da TV de 55 polegadas!</p></div></div></section>`;
 
 T.ofertas=()=>{
- const t=q.toLowerCase(),lista=P.filter(p=>(cat==="todas"||p.camp===cat)&&(!t||(p.n+" "+p.m+" "+p.c).toLowerCase().includes(t)));
+ const t=q.toLowerCase(),lista=V().filter(p=>(cat==="todas"||p.camp===cat)&&(!t||(p.n+" "+p.m+" "+p.c).toLowerCase().includes(t)));
  const bloco=(k,txt)=>{const l=lista.filter(p=>p.camp===k);return l.length?`<div class="cab" style="margin:8px 0 0"><div><div class="eyebrow">${CAMPNOME[k]}</div><h2 style="font-size:30px">${txt}</h2></div></div><div class="grade">${l.map(card).join("")}</div>`:""};
  const corpo=!lista.length?`<div class="vazio">Nada encontrado para "${esc(q)}". Pergunte pelo WhatsApp que a gente procura pra você.</div>`
   :(cat==="todas"&&!t)?bloco("senior","Cuidado e bem-estar para quem sempre cuidou da gente")+bloco("especial","Ofertas especiais da semana")+bloco("beleza","Produtinhos que valem a pena")
@@ -527,17 +565,17 @@ T.ofertas=()=>{
  return `<section class="tela"><div class="wrap">${migalha(["Ofertas"])}
  <div class="cab" style="margin:0"><div><div class="eyebrow">Válidas esta semana</div><h2>Ofertas da semana</h2><p>Os mesmos encartes que a loja divulga no WhatsApp. Toque em "Encarte" para ver a arte original.</p></div></div>
  <div class="como"><div><b>1</b><span>Coloque os produtos na cesta</span></div><div><b>2</b><span>Escolha a loja e o horário</span></div><div><b>3</b><span>Mostre o código e pague na loja</span></div></div>
- <div class="barra" style="margin:0"><div class="filtros" role="group" aria-label="Campanhas">${CAMPS.map(([k,n])=>`<a class="chip" style="text-decoration:none" aria-pressed="${k===cat}" href="#ofertas${k==="todas"?"":"-"+k}">${n} <small>${k==="todas"?P.length:P.filter(p=>p.camp===k).length}</small></a>`).join("")}</div>
+ <div class="barra" style="margin:0"><div class="filtros" role="group" aria-label="Campanhas">${CAMPS.map(([k,n])=>`<a class="chip" style="text-decoration:none" aria-pressed="${k===cat}" href="#ofertas${k==="todas"?"":"-"+k}">${n} <small>${k==="todas"?V().length:V().filter(p=>p.camp===k).length}</small></a>`).join("")}</div>
  <label class="busca" for="busca"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg><input id="busca" type="search" placeholder="Buscar produto ou marca" value="${esc(q)}"></label></div>
  ${corpo}
  <p class="nota">Ofertas válidas por tempo limitado ou enquanto durarem os estoques.</p></div></section>`};
 
 T.produto=id=>{const p=prod(id);if(!p)return T.naoachou();const off=p.de?Math.round((1-p.por/p.de)*100):0,[e1,e2]=estq(p.id);
  const est=(n)=>n===0?`<span style="color:#A3141B;font-weight:700">Sem estoque</span>`:n<=3?`<span style="color:#B07A00;font-weight:700">Últimas ${n} un.</span>`:`<span class="ok-txt">Disponível</span>`;
- const rel=P.filter(x=>x.camp===p.camp&&x.id!==p.id).slice(0,4);
+ const rel=V().filter(x=>x.camp===p.camp&&x.id!==p.id).slice(0,4);
  return `<section class="tela"><div class="wrap">${migalha(["Ofertas","ofertas"],[CAMPNOME[p.camp],"ofertas-"+p.camp],[p.m])}
  <div class="detalhe">
-  <div style="display:grid;gap:14px;justify-items:center"><div class="foto-g ${p.enc?"contain":""}"><img src="${IMG[p.img]}" alt="${esc(p.m+" "+p.n)}">${off?`<span class="selo">-${off}%</span>`:""}</div>${p.enc?`<button type="button" class="ver-enc-g" data-enc="${p.id}"><img src="${IMG[p.enc]}" alt=""><span><b>Ver encarte da oferta</b><br><small>Arte divulgada pela loja</small></span></button>`:""}</div>
+  <div style="display:grid;gap:14px;justify-items:center"><div class="foto-g ${p.enc?"contain":""}"><img src="${im(p.img)}" alt="${esc(p.m+" "+p.n)}">${off?`<span class="selo">-${off}%</span>`:""}</div>${p.enc?`<button type="button" class="ver-enc-g" data-enc="${p.id}"><img src="${im(p.enc)}" alt=""><span><b>Ver encarte da oferta</b><br><small>Arte divulgada pela loja</small></span></button>`:""}</div>
   <div style="display:grid;gap:18px;min-width:0">
    <div><div class="marca-g">${CAMPNOME[p.camp]} · ${p.m}</div><h1>${p.n}</h1>${p.det?`<div style="color:var(--tinta-2);margin-top:6px">${p.det}</div>`:""}</div>
    <div class="preco-g">${p.de?`<s>De ${brl(p.de)}</s>`:`<span style="color:var(--tinta-2);font-weight:700">1 unidade</span>`}<strong>${brl(p.por)}</strong>${p.de?`<span class="eco">Economize ${brl(p.de-p.por)}</span>`:""}</div>${p.tag?`<div class="tag-oferta" style="font-size:15px">${p.tag}</div>`:""}
@@ -642,7 +680,26 @@ T.lojas=()=>{const hoje=idxDia(new Date());
   <a class="btn btn-sec" href="https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(l.end+", Boituva - SP")}" target="_blank" rel="noopener">Como chegar</a></div></article>`).join("")}</div>
  </div></section>`};
 
-T.painel=()=>{
+const USUARIOS={"multidrogas":"farmacia2026"};
+const logado=()=>{try{return sessionStorage.getItem("md-login")}catch(e){return null}};
+T.login=()=>`<section class="tela"><div class="wrap"><div class="login-box">
+ <div class="login-cab"><img src="${im("LOGO")}" alt="MultiDrogas" style="height:46px;width:auto"><div><div class="eyebrow">Área da loja</div><h1 style="font-size:28px;color:var(--azul-escuro)">Entrar no painel</h1></div></div>
+ <form id="fLogin" novalidate>
+  <div class="campo"><label for="lUser">Usuário</label><input id="lUser" autocomplete="username" placeholder="Seu usuário"></div>
+  <div class="campo"><label for="lPass">Senha</label><div class="senha"><input id="lPass" type="password" autocomplete="current-password" placeholder="Sua senha"><button type="button" class="link-txt" id="lVer" aria-label="Mostrar senha">Mostrar</button></div></div>
+  <p class="erro" id="lErro" hidden></p>
+  <button type="submit" class="btn btn-azul" style="width:100%">Entrar</button>
+ </form>
+ <div class="login-demo"><b>Acesso de demonstração</b><span>usuário <code>multidrogas</code> · senha <code>farmacia2026</code></span><small>Na versão contratada, cada funcionário tem seu próprio login e as ações ficam registradas.</small></div>
+ <a href="#inicio" class="link-txt" style="justify-self:center">Voltar ao site</a>
+</div></div></section>`;
+function ligarLogin(){const f=$("fLogin");if(!f)return;
+ $("lVer").onclick=()=>{const p=$("lPass");p.type=p.type==="password"?"text":"password";$("lVer").textContent=p.type==="password"?"Mostrar":"Ocultar"};
+ f.onsubmit=e=>{e.preventDefault();const u=$("lUser").value.trim().toLowerCase(),p=$("lPass").value;
+  if(USUARIOS[u]&&USUARIOS[u]===p){try{sessionStorage.setItem("md-login",u)}catch(x){};abaAdm="resultados";render()}
+  else{$("lErro").hidden=false;$("lErro").textContent="Usuário ou senha incorretos.";$("lPass").value="";$("lPass").focus()}};
+ $("lUser").focus()}
+T.painel=()=>{if(!logado())return T.login();
  const todas=[...reservas,...EXEMPLOS].filter(r=>filtroLoja==="todas"||r.loja===+filtroLoja);
  const ver=abaAdm==="hoje"?todas.filter(r=>r.status==="pendente"||r.status==="separada"):todas;
  const c=s=>todas.filter(r=>r.status===s).length;
@@ -650,16 +707,17 @@ T.painel=()=>{
  return `<section class="tela"><div class="wrap">
  <div class="cab" style="margin:0"><div><div class="eyebrow">Área da equipe</div><h2>Painel da loja</h2><p>Resultados do site, fila de reservas do balcão e ofertas no ar.</p></div><a class="btn btn-sec" href="#inicio">Voltar ao site</a></div>
  <div class="admin">
-  <aside><b>MultiDrogas</b>
+  <aside><b>MultiDrogas</b><small style="color:#8FA6DD;margin:-6px 0 8px 10px">${esc(logado())}</small>
    <button type="button" data-aba="resultados" aria-pressed="${abaAdm==="resultados"}">Resultados</button>
    <button type="button" data-aba="hoje" aria-pressed="${abaAdm==="hoje"}">Fila do balcão</button>
    <button type="button" data-aba="todas" aria-pressed="${abaAdm==="todas"}">Todas as reservas</button>
-   <button type="button" data-aba="ofertas" aria-pressed="${abaAdm==="ofertas"}">Ofertas da vitrine</button>
+   <button type="button" data-aba="ofertas" aria-pressed="${abaAdm==="ofertas"}">Ofertas e produtos</button>
+   <button type="button" data-sair="1" style="margin-top:14px;color:#FFB4B7">Sair</button>
   </aside>
-  <div class="conteudo">${abaAdm==="resultados"?resultados():`
+  <div class="conteudo">${abaAdm==="resultados"?resultados():abaAdm==="ofertas"?adminOfertas():`
    <div class="filtro-loja">${[["todas","Todas as lojas"],["0","Loja 1"],["1","Loja 2"]].map(([v,t])=>`<button type="button" class="chip" aria-pressed="${filtroLoja===v}" data-fl="${v}">${t}</button>`).join("")}</div>
    <div class="kpis-g"><div class="kpi-g alerta"><b>${c("pendente")}</b><span>a separar</span></div><div class="kpi-g"><b>${c("separada")}</b><span>prontas para retirar</span></div><div class="kpi-g"><b>${c("retirada")}</b><span>retiradas</span></div><div class="kpi-g"><b style="font-size:24px">${brl(fat)}</b><span>vendido por reserva</span></div></div>
-   ${abaAdm==="ofertas"?`<div class="tabela-wrap"><table class="res"><thead><tr><th>Produto</th><th>De</th><th>Por</th><th>Estoque L1 / L2</th><th>Vitrine</th></tr></thead><tbody>${P.map(p=>`<tr><td style="display:flex;gap:10px;align-items:center"><img src="${IMG[p.img]}" alt="" style="width:40px;height:50px;object-fit:${p.enc?"contain":"cover"};background:#fff;border-radius:6px">${p.m} ${p.n}<br><small>${CAMPNOME[p.camp]}</small></td><td>${p.de?brl(p.de):"—"}</td><td><b>${brl(p.por)}</b></td><td>${estq(p.id).join(" / ")}</td><td><span class="pill retirada">No ar</span></td></tr>`).join("")}</tbody></table></div><p class="nota" style="margin:0">Na versão contratada, a equipe troca foto, preço e validade da oferta por aqui.</p>`
+   ${abaAdm==="ofertas"?`<div class="tabela-wrap"><table class="res"><thead><tr><th>Produto</th><th>De</th><th>Por</th><th>Estoque L1 / L2</th><th>Vitrine</th></tr></thead><tbody>${P.map(p=>`<tr><td style="display:flex;gap:10px;align-items:center"><img src="${im(p.img)}" alt="" style="width:40px;height:50px;object-fit:${p.enc?"contain":"cover"};background:#fff;border-radius:6px">${p.m} ${p.n}<br><small>${CAMPNOME[p.camp]}</small></td><td>${p.de?brl(p.de):"—"}</td><td><b>${brl(p.por)}</b></td><td>${estq(p.id).join(" / ")}</td><td><span class="pill retirada">No ar</span></td></tr>`).join("")}</tbody></table></div><p class="nota" style="margin:0">Na versão contratada, a equipe troca foto, preço e validade da oferta por aqui.</p>`
    :`<div class="tabela-wrap"><table class="res"><thead><tr><th>Código</th><th>Cliente</th><th>Itens</th><th>Loja · retirada</th><th>Status</th><th>Ação</th></tr></thead><tbody>
    ${ver.length?ver.map(r=>{const lj=LOJAS[r.loja];
     const ac=r.status==="pendente"?`<button class="mini" data-st="${r.cod}" data-s="separada">Marcar separada</button><button class="mini" data-st="${r.cod}" data-s="cancelada">Cancelar</button>`:r.status==="separada"?`<button class="mini" data-st="${r.cod}" data-s="retirada">Dar baixa</button>`:"—";
@@ -695,6 +753,65 @@ function resultados(){
   <div class="res-card"><h3>De onde vieram os clientes</h3><div class="funil">${orig.map(([t,v])=>`<div><div class="f-l"><span>${t}</span><b>${v}%</b></div><div class="f-b"><i style="width:${v}%;background:var(--amarelo)"></i></div></div>`).join("")}</div></div>
  </div>
  <p class="nota" style="margin:0">Na versão contratada, estes números são medidos automaticamente e chegam toda segunda no WhatsApp do dono.</p>`}
+
+let rasc=null,avisoAdm="";
+const novoRasc=()=>({id:null,n:"",m:"",camp:"senior",c:"",de:"",por:"",tag:"",b:["","",""],med:false,img:"",enc:"",val:"",est:[5,5]});
+function adminOfertas(){
+ if(rasc)return formOferta();
+ const st=p=>p.off?`<span class="pill cancelada">Pausada</span>`:vencida(p)?`<span class="pill pendente">Vencida</span>`:`<span class="pill retirada">No ar</span>`;
+ const lst=[...P].sort((a,b)=>(b.id>=1000)-(a.id>=1000));
+ return `<div class="adm-top"><div><h3 style="font-size:24px;color:var(--azul-escuro)">Ofertas da vitrine</h3><p class="nota" style="margin:0">${V().length} no ar · ${P.length-V().length} pausadas ou vencidas</p></div><button type="button" class="btn btn-azul" data-nova="1">+ Nova oferta</button></div>
+ ${avisoAdm?`<div class="ok-box" role="status">${avisoAdm}</div>`:""}
+ <div class="tabela-wrap"><table class="res"><thead><tr><th>Produto</th><th>Campanha</th><th>De / Por</th><th>Validade</th><th>Status</th><th>Ações</th></tr></thead><tbody>
+ ${lst.map(p=>`<tr><td><div style="display:flex;gap:10px;align-items:center"><img src="${im(p.img)}" alt="" style="width:44px;height:54px;object-fit:contain;background:#fff;border:1px solid var(--linha);border-radius:6px;flex:none"><div><b>${esc(p.n)}</b><br><small>${esc(p.m)}${p.id>=1000?' · <span class="exemplo" style="margin:0">nova</span>':""}</small></div></div></td>
+ <td>${CAMPNOME[p.camp]}</td><td>${p.de?`<s style="color:var(--tinta-2)">${brl(+p.de)}</s><br>`:""}<b>${brl(+p.por)}</b></td><td>${p.val?p.val.split("-").reverse().join("/"):"—"}</td><td>${st(p)}</td>
+ <td><button class="mini" data-editar="${p.id}">Editar</button><button class="mini" data-pausar="${p.id}">${p.off?"Reativar":"Pausar"}</button>${p.id>=1000?`<button class="mini" data-excluir="${p.id}">Excluir</button>`:""}${!p.off&&!vencida(p)?`<a class="mini" style="text-decoration:none;display:inline-block" href="#produto-${p.id}">Ver</a>`:""}</td></tr>`).join("")}
+ </tbody></table></div>
+ <div style="display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;align-items:center"><p class="nota" style="margin:0">Na demonstração, o cadastro fica salvo neste navegador. Na versão contratada, a oferta publicada aparece para todos os clientes na hora.</p><button type="button" class="link-txt" data-restaurar="1">Restaurar ofertas originais</button></div>`}
+function formOferta(){const r=rasc;
+ return `<form id="fOferta" class="form-oferta" novalidate>
+ <div class="adm-top"><h3 style="font-size:24px;color:var(--azul-escuro)">${r.id?"Editar oferta":"Nova oferta"}</h3><button type="button" class="link-txt" data-cancelar="1">Cancelar</button></div>
+ <div class="fo-grid">
+  <div class="fo-fotos">
+   <div class="campo"><label for="oFoto">Foto do produto</label><div class="fo-prev">${r.img?`<img src="${im(r.img)}" alt="Prévia da foto">`:`<span>Sem foto</span>`}</div><input id="oFoto" type="file" accept="image/*"><small class="nota" style="margin:0">Foto do celular serve. O sistema recorta e reduz sozinho.</small></div>
+   <div class="campo"><label for="oEnc">Encarte (opcional)</label><div class="fo-prev fo-enc">${r.enc?`<img src="${im(r.enc)}" alt="Prévia do encarte">`:`<span>Sem encarte</span>`}</div><input id="oEnc" type="file" accept="image/*"></div>
+  </div>
+  <div class="fo-campos">
+   <div class="campo"><label for="oNome">Nome do produto</label><input id="oNome" value="${esc(r.n)}" placeholder="Ex.: Protetor solar FPS 50 120ml"></div>
+   <div class="duas"><div class="campo"><label for="oMarca">Marca</label><input id="oMarca" value="${esc(r.m)}" placeholder="Ex.: Nivea"></div>
+   <div class="campo"><label for="oCamp">Campanha</label><select id="oCamp">${CAMPS.slice(1).map(([k,n])=>`<option value="${k}" ${r.camp===k?"selected":""}>${n}</option>`).join("")}</select></div></div>
+   <div class="duas"><div class="campo"><label for="oDe">Preço de (R$)</label><input id="oDe" inputmode="decimal" value="${r.de?Number(r.de).toFixed(2).replace(".",","):""}" placeholder="Opcional"></div>
+   <div class="campo"><label for="oPor">Preço por (R$)</label><input id="oPor" inputmode="decimal" value="${r.por?Number(r.por).toFixed(2).replace(".",","):""}" placeholder="Ex.: 29,90"></div></div>
+   <div class="campo"><label for="oTag">Etiqueta da promoção (opcional)</label><input id="oTag" value="${esc(r.tag||"")}" placeholder="Ex.: Leve 3, pague 2"></div>
+   <div class="campo"><label for="oB0">Destaques do produto</label>${[0,1,2].map(i=>`<input id="oB${i}" value="${esc((r.b||[])[i]||"")}" placeholder="Destaque ${i+1}" ${i?'style="margin-top:6px"':""}>`).join("")}</div>
+   <div class="duas"><div class="campo"><label for="oVal">Válida até</label><input id="oVal" type="date" value="${r.val||""}"></div>
+   <div class="campo"><label for="oE1">Estoque Loja 1 / Loja 2</label><div style="display:flex;gap:6px"><input id="oE1" inputmode="numeric" value="${(r.est||[])[0]??""}" aria-label="Estoque Loja 1"><input id="oE2" inputmode="numeric" value="${(r.est||[])[1]??""}" aria-label="Estoque Loja 2"></div></div></div>
+   <label class="chk"><input id="oMed" type="checkbox" ${r.med?"checked":""}> É medicamento (mostra o aviso obrigatório)</label>
+   <p class="erro" id="oErro" hidden></p>
+   <div style="display:flex;gap:10px;flex-wrap:wrap"><button type="submit" class="btn btn-azul">${r.id?"Salvar alterações":"Publicar na vitrine"}</button><button type="button" class="btn btn-sec" data-cancelar="1">Cancelar</button></div>
+  </div>
+ </div></form>`}
+function lerImagem(file,max,cb){const fr=new FileReader();fr.onload=()=>{const img=new Image();img.onload=()=>{const k=Math.min(1,max/Math.max(img.width,img.height));const c=document.createElement("canvas");c.width=Math.round(img.width*k);c.height=Math.round(img.height*k);const x=c.getContext("2d");x.fillStyle="#fff";x.fillRect(0,0,c.width,c.height);x.drawImage(img,0,0,c.width,c.height);cb(c.toDataURL("image/jpeg",.8))};img.src=fr.result};fr.readAsDataURL(file)}
+function ligarFormOferta(){
+ const f=$("fOferta");if(!f)return;
+ const num=v=>{const n=parseFloat(String(v).replace(/\./g,"").replace(",","."));return isNaN(n)?"":n};
+ const sync=()=>{Object.assign(rasc,{n:$("oNome").value,m:$("oMarca").value,camp:$("oCamp").value,de:num($("oDe").value),por:num($("oPor").value),tag:$("oTag").value,b:[0,1,2].map(i=>$("oB"+i).value),val:$("oVal").value,est:[+$("oE1").value||0,+$("oE2").value||0],med:$("oMed").checked})};
+ f.addEventListener("input",sync);f.addEventListener("change",sync);
+ $("oFoto").onchange=e=>{const fl=e.target.files[0];if(fl)lerImagem(fl,560,d=>{sync();rasc.img=d;render()})};
+ $("oEnc").onchange=e=>{const fl=e.target.files[0];if(fl)lerImagem(fl,900,d=>{sync();rasc.enc=d;render()})};
+ f.onsubmit=e=>{e.preventDefault();sync();
+  const err=!rasc.n.trim()?"Informe o nome do produto.":!rasc.por||rasc.por<=0?"Informe o preço por, por exemplo 29,90.":rasc.de&&rasc.de<=rasc.por?"O preço de precisa ser maior que o preço por.":!rasc.img?"Adicione a foto do produto.":"";
+  $("oErro").hidden=!err;$("oErro").textContent=err;if(err)return;
+  const dados={n:rasc.n.trim(),m:rasc.m.trim()||"MultiDrogas",camp:rasc.camp,c:CAMPNOME[rasc.camp],de:rasc.de||null,por:rasc.por,tag:rasc.tag.trim(),b:rasc.b.filter(x=>x.trim()),med:rasc.med,img:rasc.img,enc:rasc.enc,val:rasc.val,est:rasc.est};
+  if(!dados.b.length)dados.b=["Oferta da semana MultiDrogas"];
+  let id=rasc.id;
+  if(id&&id<1000)CUST.edit[id]=dados;
+  else if(id){const i=CUST.novos.findIndex(x=>x.id===id);CUST.novos[i]={...dados,id}}
+  else{id=Math.max(999,...CUST.novos.map(x=>x.id))+1;CUST.novos.push({...dados,id})}
+  if(!salvarCust())return;
+  aplicarCust();avisoAdm=`Oferta "${esc(dados.n)}" ${rasc.id?"atualizada":"publicada na vitrine"}. <a href="#produto-${id}">Ver no site</a>`;rasc=null;render()};
+}
+function salvarCust(){try{localStorage.setItem("md-cust",JSON.stringify(CUST));return true}catch(e){$("oErro")&&( $("oErro").hidden=false,$("oErro").textContent="Sem espaço para salvar mais fotos neste navegador. Exclua uma oferta nova ou use fotos menores.");return false}}
 T.naoachou=()=>`<section class="tela"><div class="wrap"><div class="vazio" style="padding:48px"><h2 style="color:var(--azul-escuro)">Página não encontrada</h2><a class="btn btn-azul" href="#inicio" style="margin-top:12px">Voltar ao início</a></div></div></section>`;
 
 /* ---- roteador ---- */
@@ -713,6 +830,7 @@ function render(){
  const tt={inicio:"",ofertas:"Ofertas",cesta:"Cesta",reservar:"Reservar",minhas:"Minhas reservas",receita:"Receitas",lojas:"Lojas",painel:"Painel"};
  document.title="MultiDrogas Boituva"+(tt[h]?" · "+tt[h]:"");
  if(h==="reservar")ligarForm();
+ if(h==="painel"){logado()?ligarFormOferta():ligarLogin()}
  const b=$("busca");if(b){b.oninput=e=>{q=e.target.value;const pos=b.selectionStart;render();const nb=$("busca");nb.focus();nb.setSelectionRange(pos,pos)}}
 }
 window.addEventListener("hashchange",()=>{qtdDet=1;$("lb").hidden=true;render()});
@@ -723,7 +841,7 @@ document.addEventListener("keydown",e=>{if(e.key==="Escape")$("lb").hidden=true}
 document.addEventListener("click",e=>{
  const t=e.target.closest("button");if(!t)return;const d=t.dataset;
  if(d.add){cesta[d.add]=(cesta[d.add]||0)+1;salvarCesta();render()}
- else if(d.enc){const p=prod(d.enc);$("lbImg").src=IMG[p.enc];$("lbImg").alt="Encarte: "+p.m+" "+p.n;$("lbT").textContent=CAMPNOME[p.camp]+" · "+p.n;$("lbAdd").dataset.lbadd=p.id;$("lbAdd").textContent=cesta[p.id]?`Na cesta (${cesta[p.id]}) · +1`:"Colocar na cesta";$("lb").hidden=false;$("lbX").focus()}
+ else if(d.enc){const p=prod(d.enc);$("lbImg").src=im(p.enc);$("lbImg").alt="Encarte: "+p.m+" "+p.n;$("lbT").textContent=CAMPNOME[p.camp]+" · "+p.n;$("lbAdd").dataset.lbadd=p.id;$("lbAdd").textContent=cesta[p.id]?`Na cesta (${cesta[p.id]}) · +1`:"Colocar na cesta";$("lb").hidden=false;$("lbX").focus()}
  else if(d.lbadd){cesta[d.lbadd]=(cesta[d.lbadd]||0)+1;salvarCesta();t.textContent=`Na cesta (${cesta[d.lbadd]}) · +1`;render()}
  else if(t.id==="lbX"){$("lb").hidden=true}
  else if(d.qd){qtdDet=Math.max(1,qtdDet+ +d.qd);$("qDet").textContent=qtdDet}
@@ -733,7 +851,14 @@ document.addEventListener("click",e=>{
  else if(d.rm){delete cesta[d.rm];salvarCesta();render()}
  else if(d.st){const r=[...reservas,...EXEMPLOS].find(x=>x.cod===d.st);r.status=d.s;gravar("md-reservas",reservas);render()}
  else if(d.fl){filtroLoja=d.fl;render()}
- else if(d.aba){abaAdm=d.aba;render()}
+ else if(d.sair){try{sessionStorage.removeItem("md-login")}catch(x){};rasc=null;render()}
+ else if(d.aba){abaAdm=d.aba;rasc=null;avisoAdm="";render()}
+ else if(d.nova){rasc=novoRasc();avisoAdm="";render();window.scrollTo(0,0)}
+ else if(d.editar){const p=prod(d.editar);rasc={...novoRasc(),...JSON.parse(JSON.stringify(p)),de:p.de||"",b:[...(p.b||[]),"","",""].slice(0,3),est:estq(p.id)};avisoAdm="";render();window.scrollTo(0,0)}
+ else if(d.cancelar){rasc=null;render()}
+ else if(d.pausar){const id=+d.pausar;CUST.off=CUST.off.includes(id)?CUST.off.filter(x=>x!==id):[...CUST.off,id];salvarCust();aplicarCust();avisoAdm="";render()}
+ else if(d.excluir){CUST.novos=CUST.novos.filter(x=>x.id!==+d.excluir);delete cesta[d.excluir];salvarCesta();salvarCust();aplicarCust();avisoAdm="Oferta excluída.";render()}
+ else if(d.restaurar){CUST={novos:[],edit:{},off:[]};salvarCust();aplicarCust();avisoAdm="Ofertas originais restauradas.";render()}
 });
 
 function ligarForm(){
